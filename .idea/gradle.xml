@@ -17,6 +17,8 @@
             <option value="$PROJECT_DIR$/ch09_resource" />
             <option value="$PROJECT_DIR$/ch10_dialog" />
             <option value="$PROJECT_DIR$/ch10_dialog2" />
+            <option value="$PROJECT_DIR$/ch13_activity" />
+            <option value="$PROJECT_DIR$/ch13_intent" />
           </set>
         </option>
       </GradleProjectSettings>
