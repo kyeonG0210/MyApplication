@@ -9,6 +9,8 @@
     android:padding="30dp"
     tools:context=".MainActivity">
 
+    <!--구조가 위에서부터 차례대로 배치됨 -> vertical -->
+
     <ProgressBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -60,8 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="비밀번호"
-        android:inputType="textPassword"
-        android:text="1234"/>
+        android:inputType="textPassword" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

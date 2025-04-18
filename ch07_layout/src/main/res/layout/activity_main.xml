@@ -31,12 +31,23 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="80dp"
         android:textSize="60dp" />
+
+    <!--GridLayout: 테이블 화면을 만드는 레이아웃
+        orientation 속성으로 가로나 세로 방향으로 뷰를 나열
+        줄바꿈을 자동으로 해줌
+        orientation: 방향 설정 / rowCount: 세로로 나열할 뷰 / columnCount: 가로로 나열할 뷰 개수
+        row는 가로 column은 세로-->
+
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:columnCount="3">
+        <!--3개씩 묶어서 수평으로-->
+        <!-- (if) vertical -> rowCount -->
 
+        <!--layout_row, layout_column으로 특정 위치 지정 가능
+            배열이므로 0번째부터 시작-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

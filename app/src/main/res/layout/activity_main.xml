@@ -10,34 +10,125 @@
     android:gravity="center_horizontal"
     tools:context=".MainActivity">
 
+    <!-- match_parent(**필수**): 부모가 가진 width, height 그대로 물려받음. 부모 뷰의 크기와 동일하게 설정. 수평/수직으로 부모의 전체 공간을 채우고 싶을 때-->
+    <!-- wrap_content(**필수**): 내용물의 크기 만큼. 뷰 안의 내용(content)을 감쌀 만큼만.-->
+    <!-- 화면에서 사라진다? -> 높이와 너비 조절해보기!-->
+    <!--orientation(**필수**): horizontal / vertical-->
+    <!-- margin: 컴포넌트(나)와 다른 컴포넌트 사이의 간격-->
+    <!-- padding: 나의 '내부'에 있는 내용(글자)와 둘러싸고 있는 외부의 윤곽선과의 간격-->
+    <!-- visible: visible, invisible, gone(공간도 화면에서 안 보이게 됨)-->
+    <!-- autoLink: 출력할 문자열을 분석해 특정 형태의 문자열에 자동 링크를 추가-->
+    <!-- maxLines : 문자열이 특정 줄까지만 나오도록 하는 속성-->
+    <!--layout_weight: 실행하고 있는 화면에 맞춰서 자동으로 너비를 세팅. 등간격으로 세팅함. layout 없는 애들 다 배치하고 나머지 차지.-->
+    <!--layout_gravity: 뷰 자체를 정렬. center=가로 세로 정중앙 / center_horizontal=가로 정중앙 / center_vertical=세로 정중앙
+                        (그러나 위의 LinearLayout에서는 match_parent로 화면 전체 차지하고 있어서 시각적 차이 없음.) -->
+    <!--gravity: 뷰 안의 컨텐츠 정렬-->
+
+    <!--Checkbox: 단독으로 클릭 가능 / 여러 항목 선택 가능
+        Radiobutton: RadoiGroup에 의해서 묶여져야 함.(선택 옵션이 서로 연관되어 작동) / 하나의 항목만 선택 가능-->
+    <!--Text의 두 종류
+        1.Textview: 수정할 수 없음. 처음 만들어진 그대로 고정된 정보
+        2.Editview: 사용자가 직접 입력할 수 있음 (hint, inputType)-->
+
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Hello World! Android kmlee@duksung.ac.kr 02-901-2345 www.ds.ac.kr"
+        android:textColor="#ff0000"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:autoLink="email|phone|web"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
-        android:layout_width=""
-        android:layout_height=""/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/duksae_desc"
+        android:textColor="#00ff55"
+        android:textSize="12dp"
+        android:textStyle="italic"
+        android:maxLines="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="이메일"
+        android:textSize="24dp"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="비밀번호"
+        android:textSize="24dp"
+        android:inputType="textPassword" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="확인하시겠습니까?" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="정말 나가시겠습니까?" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2학년" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3학년" />
+    </RadioGroup>
 
     <ImageView
-        android:layout_width=""
-        android:layout_height=""/>
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/duksae" />
+
     <Button
-        android:layout_width=""
-        android:layout_height=""/>
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ok Button"
+        android:textColor="#00ff55"
+        android:textSize="24dp"
+        android:textStyle="italic"
+        tools:layout_editor_absoluteX="166dp"
+        tools:layout_editor_absoluteY="458dp" />
+
     <Button
-        android:layout_width=""
-        android:layout_height=""/>
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_margin="15dp"
-        and/>
-
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/button3"
@@ -48,5 +139,21 @@
             android:paddingTop="30dp"
             android:text="Button"
             android:visibility="visible" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
 
 </LinearLayout>
