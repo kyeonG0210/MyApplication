@@ -140,7 +140,8 @@ class MainActivity : AppCompatActivity() {
                         var str = ""
                         for(i in 0..3) { // 0..3
                             if(multi_selected[i] == true)
-                            str += items[i]
+                            str +=
+                                items[i]
                         }
                         binding.btnMulti.text = "Multi Items : $str"
                         binding.btnMulti.textSize = 24f
