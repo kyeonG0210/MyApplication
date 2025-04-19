@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--values Resource file => 이름은 strings.xml 동일하게 => 같은 폴더인 valuse 밑에 => Locale => ko. South Korea -->
+<!--device setting에서 language를 한국어로 바꾸고 우선순위 바꿔야 함.-->
 <resources>
     <string name="app_name">Ch9_Resource</string>
     <string name="intro_main">

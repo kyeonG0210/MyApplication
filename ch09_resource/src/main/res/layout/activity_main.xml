@@ -45,6 +45,7 @@
         android:layout_marginBottom="20dp"
         android:gravity="center_horizontal"
         android:text="@string/intro_delay"/>
+    <!--alignParentBottom: relative에서는 디바이스를 기준으로 맨 아래쪽에 배치-->
 
     <Button
         android:layout_width="match_parent"
@@ -56,3 +57,8 @@
         android:textColor="#FFFFFF"/>
 
 </RelativeLayout>
+
+
+
+
+

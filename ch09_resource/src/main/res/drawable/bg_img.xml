@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--배경 색깔 꾸미기-->
+<!--그림 그릴거니까 root element를 shape로-->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
+    <!--서서히 변하는 색-->
     <gradient
         android:startColor="#aa9900"
         android:endColor="#00aa99"

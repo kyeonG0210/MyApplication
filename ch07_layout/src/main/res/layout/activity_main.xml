@@ -9,14 +9,16 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:orientation="horizontal">
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:src="@drawable/add"
             app:tint="#00ff00"/>
+        <!--이미지 색깔 수정: tint-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,15 +41,29 @@
         row는 가로 column은 세로-->
 
     <GridLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
         android:columnCount="3">
         <!--3개씩 묶어서 수평으로-->
         <!-- (if) vertical -> rowCount -->
 
         <!--layout_row, layout_column으로 특정 위치 지정 가능
-            배열이므로 0번째부터 시작-->
+            배열이므로 0번째부터 시작
+            ex) android:layout_row="1"
+                android:layout_column="0"-->
+
+        <!-- android:layout_gravity: Textview 자체의 위치를 바꿀 수 있음.
+             center_horizontal: 크기는 그대로 유지하되 정중앙에 배치
+             fill_horizontal: 크기를 제일 긴 것에 맞춰서 전체를 채우는 형태로 가로로 채운다
+             center_vertical: 세로로 가운데
+             fill_vertical
+
+             android:gravity: 뷰 안의 컨텐츠 정렬 -->
+
+        <!--layout_rowSpan: (여러) 칸에 걸쳐져 있다.
+        ex) layout_rowSpan="2" -> 두 칸에 걸쳐져 있다. -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -168,8 +184,24 @@
             android:text="#"
             android:textSize="24dp" />
     </GridLayout>
+
+    <!--RelativeLayout: 상대 위치로 배치. layout에 들어있는 뷰들을 각각 설정해줘야 함. 각각의 뷰에 아이디 부여. 같은 모듈 안에서 동일한 아이디 X
+        - layout_above: 기준 뷰의 위쪽에 배치
+        - layout_below: 기준 뷰의 아래쪽에 배치
+        - layout_toLeftOf: 기준 뷰의 왼쪽에 배치
+        - layout_toRightOf: 기준 뷰의 오른쪽에 배치
+
+        - layout_alignParentTop: 부모의 위쪽에 맞춤
+        - layout_alignParentBottom: 부모의 아래쪽에 맞춤
+        - layout_alignParentLeft: 부모의 왼쪽에 맞춤
+        - layout_alignParentRight: 부모의 오른쪽에 맞춤
+        - layout_centerHorizontal: 부모의 가로 방향 중앙에 맞춤
+        - layout_centerVertical: 부모의 세로 방향 중앙에 맞춤
+        - layout_centerInParent: 부모의 가로 세로 중앙에 맞춤
+                               = (true / false)-->
+
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal">
         <ImageView
@@ -192,6 +224,10 @@
             android:src="@drawable/back" />
 
     </RelativeLayout>
+
+    <!--ConstraintLayout: 계층 구조로 배치. 복잡하니까 디자인 모드로 삽입. 태그 이름이 김. build.gradle에 포함되어있음.
+        각각의 뷰에 대해 배치될 위치를 지정해줄 수 있음. RelativeLayout보다 더 많은 속성 제공. (수업 때 자주 쓰지 않을 것.)
+        Design -> Attributes -> Layout -> Constraint Widget에서 디폴트 값으로 초기화 시켜주기! -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

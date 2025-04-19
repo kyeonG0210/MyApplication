@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--8개 중 앞의 2개는 투명도, 뒤의 6개로 색상 조정-->
+<!--color를 직접 지정하는 것이 아니라 colors resource에다 저장하는 이유: 색상 변경 용이(일일히 변경하지 않아도 됨)-->
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
