@@ -25,4 +25,32 @@ finish()
 
 [생명주기]
 종료하고 시작하면 onCreate()부터
-* */
+*/
+
+/* [Tips!] Studio에서 Preview가 보이지 않을 때
+Studio에서 Preview가 보이지 않을 때, 아래 방법을 실행해보세요.
+
+1. res/values/themes.xml 수정
+
+  <style name="...MyApplication" parent="Theme....">을
+
+  <style name="...MyApplication" parent="Base.Theme....">으로 수정
+
+2. 메뉴 Build > Clean project
+
+3. Studio 종료 후 재 실행
+*/
+
+/* [Tips!] 안드로이드 플랫폼 string 리소스
+안드로이드 플랫폼은 drawable, string, color, menu 등 많은 리소스를 제공하고 있습니다.
+
+다만 string은 일부분만 직접 사용할 수 있고
+
+대부분은 private하게 접근 제한이 걸려있습니다.
+
+
+
+강의 시간에는 안드로이드 플랫폼의 string을 사용하는 방법을 실습한 것이고
+
+만약 접근 제한(private) 오류가 발생하면, 출력이 가능한 다른 문자열로 대체해야 합니다.
+*/
