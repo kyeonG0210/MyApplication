@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
+    <!--activity_main = LinearLayout, vertical -> 맨 위에서부터 차례차례 수직으로 배치-->
 
     <TextView
         android:layout_width="match_parent"
@@ -13,12 +14,17 @@
         android:textSize="24dp"
         android:textStyle="bold"
         android:text="선택을 시작하겠습니까?" />
+    <!--MainActivity(코틀린)에서 설정이 필요 -> 반드시 아이디 설정 (아이디를 통해 접근)-->
     <CheckBox
         android:id="@+id/chb_start"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:text="시작함" />
+
+    <!--좋아하는 애완동물~이미지뷰 LinearLayout으로 묶음
+        (보통 orientation이 바뀔 때 LinearLayout 안에 LinearLayout을 둠.)
+        '시작함'버튼 눌렀을 때 숨기거나 보이거나 해줘야 함 -> LinearLayout로 묶어놓으면 visibility 한꺼번에 제어 가능-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
