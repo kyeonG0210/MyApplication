@@ -147,7 +147,8 @@ class MainActivity : AppCompatActivity() {
                         Log.d(TAG, "POSITIVE BUTTON")
                         var str = ""
                         for(i in 0..3) { // 0..3
-                            if(multi_selected[i] == true) //체크 해제된 것은 제외
+                            if(multi_selected[i] == true)
+                                //체크 해제된 것은 제외
                             str += //for문이 돌아갈 때마다 str 변수에
                                 items[i] //items에 있는 i번째 아이템을 출력
                         }
